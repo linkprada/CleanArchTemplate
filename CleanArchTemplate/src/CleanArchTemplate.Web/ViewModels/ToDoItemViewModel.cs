@@ -1,4 +1,8 @@
-﻿using CleanArchTemplate.Core.ProjectAggregate;
+﻿// <copyright file="ToDoItemViewModel.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using CleanArchTemplate.Core.ProjectAggregate;
 
 namespace CleanArchTemplate.Web.ViewModels
 {
@@ -16,7 +20,7 @@ namespace CleanArchTemplate.Web.ViewModels
                 Id = item.Id,
                 Title = item.Title,
                 Description = item.Description,
-                IsDone = item.IsDone
+                IsDone = item.IsDone,
             };
         }
     }

@@ -1,11 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="DefaultCoreDependencies.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using CleanArchTemplate.Core.Interfaces;
 using CleanArchTemplate.Core.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CleanArchTemplate.Core
 {

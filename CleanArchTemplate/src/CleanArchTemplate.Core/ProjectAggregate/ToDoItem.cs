@@ -1,4 +1,8 @@
-﻿using CleanArchTemplate.SharedKernel;
+﻿// <copyright file="ToDoItem.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using CleanArchTemplate.SharedKernel;
 
 namespace CleanArchTemplate.Core.ProjectAggregate
 {

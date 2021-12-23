@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// <copyright file="ToDoItemDTO.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System.ComponentModel.DataAnnotations;
 using CleanArchTemplate.Core.ProjectAggregate;
 
 namespace CleanArchTemplate.Web.ApiModels
@@ -19,7 +23,7 @@ namespace CleanArchTemplate.Web.ApiModels
                 Id = item.Id,
                 Title = item.Title,
                 Description = item.Description,
-                IsDone = item.IsDone
+                IsDone = item.IsDone,
             };
         }
     }

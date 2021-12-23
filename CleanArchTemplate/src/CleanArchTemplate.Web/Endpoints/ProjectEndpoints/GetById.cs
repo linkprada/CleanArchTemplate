@@ -1,12 +1,16 @@
-﻿using Ardalis.ApiEndpoints;
-using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
+﻿// <copyright file="GetById.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ardalis.ApiEndpoints;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Core.ProjectAggregate.Specifications;
 using CleanArchTemplate.SharedKernel.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {
@@ -33,13 +37,16 @@ namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
         {
             var spec = new ProjectByIdWithItemsSpec(request.ProjectId);
             var entity = await _repository.GetBySpecAsync(spec); // TODO: pass cancellation token
-            if (entity == null) return NotFound();
+            if (entity == null)
+            {
+                return NotFound();
+            }
 
             var response = new GetProjectByIdResponse
             {
                 Id = entity.Id,
                 Name = entity.Name,
-                Items = entity.Items.Select(item => new ToDoItemRecord(item.Id, item.Title, item.Description, item.IsDone)).ToList()
+                Items = entity.Items.Select(item => new ToDoItemRecord(item.Id, item.Title, item.Description, item.IsDone)).ToList(),
             };
             return Ok(response);
         }

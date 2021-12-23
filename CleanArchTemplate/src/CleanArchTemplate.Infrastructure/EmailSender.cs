@@ -1,7 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
+﻿// <copyright file="EmailSender.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Net.Mail;
 using System.Threading.Tasks;
 using CleanArchTemplate.Core.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace CleanArchTemplate.Infrastructure
 {
@@ -19,12 +23,9 @@ namespace CleanArchTemplate.Infrastructure
             var emailClient = new SmtpClient("localhost");
             var message = new MailMessage
             {
-
                 From = new MailAddress(from),
                 Subject = subject,
-                Body = body
-
-
+                Body = body,
             };
             message.To.Add(new MailAddress(to));
             await emailClient.SendMailAsync(message);

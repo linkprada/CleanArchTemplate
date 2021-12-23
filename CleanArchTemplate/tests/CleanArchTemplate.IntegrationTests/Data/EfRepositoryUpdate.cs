@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// <copyright file="EfRepositoryUpdate.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using CleanArchTemplate.Core.ProjectAggregate;
-using CleanArchTemplate.UnitTests;
+using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace CleanArchTemplate.IntegrationTests.Data

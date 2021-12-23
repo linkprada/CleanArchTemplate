@@ -1,5 +1,8 @@
-﻿using Ardalis.Specification;
-using CleanArchTemplate.Core.ProjectAggregate;
+﻿// <copyright file="ProjectByIdWithItemsSpec.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using Ardalis.Specification;
 
 namespace CleanArchTemplate.Core.ProjectAggregate.Specifications
 {

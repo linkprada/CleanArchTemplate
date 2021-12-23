@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿// <copyright file="IncompleteItemSpecificationsConstructor.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System.Collections.Generic;
 using System.Linq;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Core.ProjectAggregate.Specifications;

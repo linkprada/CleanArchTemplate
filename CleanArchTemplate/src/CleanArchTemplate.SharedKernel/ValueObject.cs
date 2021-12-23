@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <copyright file="ValueObject.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -19,8 +23,10 @@ namespace CleanArchTemplate.SharedKernel
                 {
                     return true;
                 }
+
                 return false;
             }
+
             return obj1.Equals(obj2);
         }
 
@@ -36,7 +42,10 @@ namespace CleanArchTemplate.SharedKernel
 
         public override bool Equals(object obj)
         {
-            if (obj == null || GetType() != obj.GetType()) return false;
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
 
             return GetProperties().All(p => PropertiesAreEqual(obj, p))
                 && GetFields().All(f => FieldsAreEqual(obj, f));

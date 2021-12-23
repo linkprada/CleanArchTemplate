@@ -1,11 +1,15 @@
-﻿using Ardalis.ApiEndpoints;
-using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
+﻿// <copyright file="List.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ardalis.ApiEndpoints;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.SharedKernel.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {

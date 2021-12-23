@@ -1,4 +1,8 @@
-﻿using CleanArchTemplate.Core.ProjectAggregate;
+﻿// <copyright file="ToDoItemBuilder.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using CleanArchTemplate.Core.ProjectAggregate;
 
 namespace CleanArchTemplate.UnitTests
 {

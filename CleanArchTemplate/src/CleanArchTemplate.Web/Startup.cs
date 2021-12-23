@@ -1,14 +1,17 @@
-﻿using Ardalis.ListStartupServices;
-using Autofac;
+﻿// <copyright file="Startup.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System.Collections.Generic;
+using Ardalis.ListStartupServices;
+using CleanArchTemplate.Core;
+using CleanArchTemplate.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System.Collections.Generic;
-using CleanArchTemplate.Core;
-using CleanArchTemplate.Infrastructure;
 
 namespace CleanArchTemplate.Web
 {
@@ -70,6 +73,7 @@ namespace CleanArchTemplate.Web
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
             app.UseRouting();
 
             app.UseHttpsRedirection();

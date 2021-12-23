@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
-using CleanArchTemplate.Core.ProjectAggregate;
+﻿// <copyright file="List.ProjectListResponse.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System.Collections.Generic;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {

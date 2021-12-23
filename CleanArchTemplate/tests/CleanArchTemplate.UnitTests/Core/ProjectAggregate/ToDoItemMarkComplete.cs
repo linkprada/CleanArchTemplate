@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿// <copyright file="ToDoItemMarkComplete.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using Xunit;
 
 namespace CleanArchTemplate.UnitTests.Core.ProjectAggregate

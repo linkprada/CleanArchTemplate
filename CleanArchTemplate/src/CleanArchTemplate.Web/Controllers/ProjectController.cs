@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// <copyright file="ProjectController.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Linq;
 using System.Threading.Tasks;
-using CleanArchTemplate.Core;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Core.ProjectAggregate.Specifications;
 using CleanArchTemplate.SharedKernel.Interfaces;
-using CleanArchTemplate.Web.ApiModels;
 using CleanArchTemplate.Web.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchTemplate.Web.Controllers
 {
@@ -33,7 +35,7 @@ namespace CleanArchTemplate.Web.Controllers
                 Name = project.Name,
                 Items = project.Items
                             .Select(item => ToDoItemViewModel.FromToDoItem(item))
-                            .ToList()
+                            .ToList(),
             };
             return View(dto);
         }

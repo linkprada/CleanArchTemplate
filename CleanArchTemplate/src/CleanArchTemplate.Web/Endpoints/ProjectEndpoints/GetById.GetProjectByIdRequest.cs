@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// <copyright file="GetById.GetProjectByIdRequest.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {

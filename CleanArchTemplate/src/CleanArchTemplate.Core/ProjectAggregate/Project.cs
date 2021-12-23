@@ -1,6 +1,10 @@
-﻿using Ardalis.GuardClauses;
+﻿// <copyright file="Project.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Collections.Generic;
 using System.Linq;
+using Ardalis.GuardClauses;
 using CleanArchTemplate.SharedKernel;
 using CleanArchTemplate.SharedKernel.Interfaces;
 

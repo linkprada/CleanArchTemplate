@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// <copyright file="ListIncomplete.ListIncompleteRequest.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {

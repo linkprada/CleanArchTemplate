@@ -1,10 +1,14 @@
-﻿using Ardalis.ApiEndpoints;
-using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
+﻿// <copyright file="Delete.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Threading;
 using System.Threading.Tasks;
+using Ardalis.ApiEndpoints;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.SharedKernel.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {
@@ -30,7 +34,10 @@ namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
             CancellationToken cancellationToken)
         {
             var aggregateToDelete = await _repository.GetByIdAsync(request.ProjectId); // TODO: pass cancellation token
-            if (aggregateToDelete == null) return NotFound();
+            if (aggregateToDelete == null)
+            {
+                return NotFound();
+            }
 
             await _repository.DeleteAsync(aggregateToDelete);
 

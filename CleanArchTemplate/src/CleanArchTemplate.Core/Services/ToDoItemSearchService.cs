@@ -1,9 +1,12 @@
-﻿using Ardalis.GuardClauses;
-using Ardalis.Result;
+﻿// <copyright file="ToDoItemSearchService.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ardalis.Result;
 using CleanArchTemplate.Core.Interfaces;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Core.ProjectAggregate.Specifications;
@@ -28,7 +31,7 @@ namespace CleanArchTemplate.Core.Services
                 errors.Add(new ValidationError()
                 {
                     Identifier = nameof(searchString),
-                    ErrorMessage = $"{nameof(searchString)} is required."
+                    ErrorMessage = $"{nameof(searchString)} is required.",
                 });
                 return Result<List<ToDoItem>>.Invalid(errors);
             }
@@ -37,7 +40,10 @@ namespace CleanArchTemplate.Core.Services
             var project = await _repository.GetBySpecAsync(projectSpec);
 
             // TODO: Optionally use Ardalis.GuardClauses Guard.Against.NotFound and catch
-            if (project == null) return Result<List<ToDoItem>>.NotFound();
+            if (project == null)
+            {
+                return Result<List<ToDoItem>>.NotFound();
+            }
 
             var incompleteSpec = new IncompleteItemsSearchSpec(searchString);
 

@@ -1,9 +1,11 @@
-﻿using Ardalis.HttpClientTestExtensions;
-using Newtonsoft.Json;
+﻿// <copyright file="ApiProjectsControllerList.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Ardalis.HttpClientTestExtensions;
 using CleanArchTemplate.Web;
 using CleanArchTemplate.Web.ApiModels;
 using Xunit;

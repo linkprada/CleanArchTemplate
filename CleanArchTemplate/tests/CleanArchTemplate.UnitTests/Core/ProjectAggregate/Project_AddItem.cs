@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <copyright file="Project_AddItem.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System;
 using CleanArchTemplate.Core.ProjectAggregate;
 using Xunit;
 
@@ -14,7 +18,7 @@ namespace CleanArchTemplate.UnitTests.Core.ProjectAggregate
             var _testItem = new ToDoItem
             {
                 Title = "title",
-                Description = "description"
+                Description = "description",
             };
 
             _testProject.AddItem(_testItem);

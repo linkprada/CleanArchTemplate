@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿// <copyright file="Index.cshtml.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Linq;
 using System.Threading.Tasks;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Core.ProjectAggregate.Specifications;
 using CleanArchTemplate.SharedKernel.Interfaces;
 using CleanArchTemplate.Web.ApiModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CleanArchTemplate.Web.Pages.ToDoRazorPage
 {
@@ -41,7 +45,7 @@ namespace CleanArchTemplate.Web.Pages.ToDoRazorPage
                 Name = project.Name,
                 Items = project.Items
                 .Select(item => ToDoItemDTO.FromToDoItem(item))
-                .ToList()
+                .ToList(),
             };
         }
     }

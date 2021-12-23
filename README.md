@@ -4,3 +4,5 @@ Inspired from [Ardalis Clean Architecture](https://github.com/ardalis/CleanArchi
 
 - Replace Autofac with Microsoft DI
 - Remove Event/Notification Mediatr Handlers
+
+- Add StyleCop

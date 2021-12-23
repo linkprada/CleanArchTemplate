@@ -1,15 +1,15 @@
-﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿// <copyright file="DefaultInfrastructureDependencies.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using CleanArchTemplate.Core.Interfaces;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Infrastructure.Data;
 using CleanArchTemplate.SharedKernel.Interfaces;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CleanArchTemplate.Infrastructure
 {
@@ -30,6 +30,7 @@ namespace CleanArchTemplate.Infrastructure
             {
                 RegisterProductionOnlyDependencies(services);
             }
+
             RegisterCommonDependencies(services, assemblies);
         }
 
@@ -61,12 +62,10 @@ namespace CleanArchTemplate.Infrastructure
 
         private static void RegisterProductionOnlyDependencies(IServiceCollection services)
         {
-            
         }
 
         private static void RegisterDevelopmentOnlyDependencies(IServiceCollection services)
         {
-            
         }
     }
 }

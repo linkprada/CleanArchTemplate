@@ -1,11 +1,13 @@
-﻿using Ardalis.EFCore.Extensions;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
+﻿// <copyright file="AppDbContext.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Threading;
 using System.Threading.Tasks;
+using Ardalis.EFCore.Extensions;
 using CleanArchTemplate.Core.ProjectAggregate;
-using CleanArchTemplate.SharedKernel;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchTemplate.Infrastructure.Data
 {
@@ -41,7 +43,10 @@ namespace CleanArchTemplate.Infrastructure.Data
             int result = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
             // ignore events if no dispatcher provided
-            if (_mediator == null) return result;
+            if (_mediator == null)
+            {
+                return result;
+            }
 
             // dispatch events only if save was successful
             //var entitiesWithEvents = ChangeTracker.Entries<BaseEntity>()

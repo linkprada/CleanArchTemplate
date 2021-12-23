@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿// <copyright file="GetById.GetProjectByIdResponse.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System.Collections.Generic;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {

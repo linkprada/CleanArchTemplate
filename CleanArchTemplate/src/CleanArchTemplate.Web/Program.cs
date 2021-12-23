@@ -1,10 +1,13 @@
-﻿using Autofac.Extensions.DependencyInjection;
+﻿// <copyright file="Program.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using System;
+using CleanArchTemplate.Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using CleanArchTemplate.Infrastructure.Data;
 
 namespace CleanArchTemplate.Web
 {
@@ -47,6 +50,5 @@ namespace CleanArchTemplate.Web
                 logging.AddConsole();
             });
         });
-
     }
 }

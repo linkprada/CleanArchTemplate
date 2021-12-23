@@ -1,4 +1,8 @@
-﻿using Ardalis.Specification.EntityFrameworkCore;
+﻿// <copyright file="EfRepository.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using Ardalis.Specification.EntityFrameworkCore;
 using CleanArchTemplate.SharedKernel.Interfaces;
 
 namespace CleanArchTemplate.Infrastructure.Data
@@ -10,6 +14,7 @@ namespace CleanArchTemplate.Infrastructure.Data
         {
         }
     }
+
     //public class EfRepository : IRepository
     //{
     //    private readonly AppDbContext _dbContext;

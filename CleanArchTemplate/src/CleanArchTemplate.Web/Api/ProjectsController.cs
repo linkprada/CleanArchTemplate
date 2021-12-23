@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// <copyright file="ProjectsController.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +9,7 @@ using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.Core.ProjectAggregate.Specifications;
 using CleanArchTemplate.SharedKernel.Interfaces;
 using CleanArchTemplate.Web.ApiModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchTemplate.Web.Api
 {
@@ -30,7 +34,7 @@ namespace CleanArchTemplate.Web.Api
                 .Select(project => new ProjectDTO
                 {
                     Id = project.Id,
-                    Name = project.Name
+                    Name = project.Name,
                 })
                 .ToList();
 
@@ -48,10 +52,8 @@ namespace CleanArchTemplate.Web.Api
             {
                 Id = project.Id,
                 Name = project.Name,
-                Items = new List<ToDoItemDTO>
-                (
-                    project.Items.Select(i => ToDoItemDTO.FromToDoItem(i)).ToList()
-                )
+                Items = new List<ToDoItemDTO>(
+                    project.Items.Select(i => ToDoItemDTO.FromToDoItem(i)).ToList()),
             };
 
             return Ok(result);
@@ -68,7 +70,7 @@ namespace CleanArchTemplate.Web.Api
             var result = new ProjectDTO
             {
                 Id = createdProject.Id,
-                Name = createdProject.Name
+                Name = createdProject.Name,
             };
             return Ok(result);
         }
@@ -79,10 +81,16 @@ namespace CleanArchTemplate.Web.Api
         {
             var projectSpec = new ProjectByIdWithItemsSpec(projectId);
             var project = await _repository.GetBySpecAsync(projectSpec);
-            if (project == null) return NotFound("No such project");
+            if (project == null)
+            {
+                return NotFound("No such project");
+            }
 
             var toDoItem = project.Items.FirstOrDefault(item => item.Id == itemId);
-            if (toDoItem == null) return NotFound("No such item.");
+            if (toDoItem == null)
+            {
+                return NotFound("No such item.");
+            }
 
             toDoItem.MarkComplete();
             await _repository.UpdateAsync(project);

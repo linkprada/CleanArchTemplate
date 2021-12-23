@@ -1,10 +1,14 @@
-﻿using Ardalis.ApiEndpoints;
-using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
+﻿// <copyright file="Update.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
 using System.Threading;
 using System.Threading.Tasks;
+using Ardalis.ApiEndpoints;
 using CleanArchTemplate.Core.ProjectAggregate;
 using CleanArchTemplate.SharedKernel.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 {
@@ -37,7 +41,7 @@ namespace CleanArchTemplate.Web.Endpoints.ProjectEndpoints
 
             var response = new UpdateProjectResponse()
             {
-                Project = new ProjectRecord(existingProject.Id, existingProject.Name)
+                Project = new ProjectRecord(existingProject.Id, existingProject.Name),
             };
             return Ok(response);
         }

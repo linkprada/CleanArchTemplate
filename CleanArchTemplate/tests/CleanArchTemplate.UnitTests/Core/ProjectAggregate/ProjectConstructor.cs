@@ -1,4 +1,8 @@
-﻿using CleanArchTemplate.Core.ProjectAggregate;
+﻿// <copyright file="ProjectConstructor.cs" company="linkprada">
+// Copyright (c) linkprada. All rights reserved.
+// </copyright>
+
+using CleanArchTemplate.Core.ProjectAggregate;
 using Xunit;
 
 namespace CleanArchTemplate.UnitTests.Core.ProjectAggregate
