@@ -2,15 +2,9 @@
 // Copyright (c) linkprada. All rights reserved.
 // </copyright>
 
-using System.Collections.Generic;
 using Ardalis.ListStartupServices;
 using CleanArchTemplate.Core;
 using CleanArchTemplate.Infrastructure;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 namespace CleanArchTemplate.Web
