@@ -3,7 +3,6 @@
 // </copyright>
 
 using CleanArchTemplate.Core.Interfaces;
-using CleanArchTemplate.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CleanArchTemplate.Core
@@ -12,7 +11,7 @@ namespace CleanArchTemplate.Core
     {
         public static void AddDefaultCoreDependencies(this IServiceCollection services)
         {
-            services.AddScoped<IToDoItemSearchService, ToDoItemSearchService>();
+
         }
     }
 }

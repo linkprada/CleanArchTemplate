@@ -2,13 +2,10 @@
 // Copyright (c) linkprada. All rights reserved.
 // </copyright>
 
-using System;
+namespace CleanArchTemplate.SharedKernel;
 
-namespace CleanArchTemplate.SharedKernel
+// source: https://github.com/jhewlett/ValueObject
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+public class IgnoreMemberAttribute : Attribute
 {
-    // source: https://github.com/jhewlett/ValueObject
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
-    public class IgnoreMemberAttribute : Attribute
-    {
-    }
 }

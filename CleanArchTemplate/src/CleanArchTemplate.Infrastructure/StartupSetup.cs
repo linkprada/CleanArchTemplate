@@ -2,16 +2,20 @@
 // Copyright (c) linkprada. All rights reserved.
 // </copyright>
 
+using CleanArchTemplate.Infrastructure.Data;
+using CleanArchTemplate.Infrastructure.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using CleanArchTemplate.Infrastructure.Data;
 
-namespace CleanArchTemplate.Infrastructure
+namespace CleanArchTemplate.Infrastructure;
+
+public static class StartupSetup
 {
-    public static class StartupSetup
-    {
-        public static void AddDbContext(this IServiceCollection services, string connectionString) =>
-            services.AddDbContext<AppDbContext>(options =>
+    public static void AddDbContext(this IServiceCollection services, string connectionString) =>
+        services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlite(connectionString)); // will be created in web project root
+
+    public static void AddIdentityDbContext(this IServiceCollection services, string connectionString) =>
+            services.AddDbContext<AppIdentityDbContext>(options =>
                 options.UseSqlite(connectionString)); // will be created in web project root
-    }
 }

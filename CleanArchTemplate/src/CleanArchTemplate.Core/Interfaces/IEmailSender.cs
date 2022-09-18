@@ -2,12 +2,9 @@
 // Copyright (c) linkprada. All rights reserved.
 // </copyright>
 
-using System.Threading.Tasks;
+namespace CleanArchTemplate.Core.Interfaces;
 
-namespace CleanArchTemplate.Core.Interfaces
+public interface IEmailSender
 {
-    public interface IEmailSender
-    {
-        Task SendEmailAsync(string to, string from, string subject, string body);
-    }
+    Task SendEmailAsync(string to, string from, string subject, string body);
 }

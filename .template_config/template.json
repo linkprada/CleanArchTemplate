@@ -1,21 +1,23 @@
 {
-	"$schema": "http://json.schemastore.org/template",
-	"author": "Said Haouaouchi @linkprada",
-	"classifications": [ "Web", "ASP.NET", "Custom Clean Architecture" ],
-	"tags": {
-		"language": "C#",
-		"type": "project"
-	},
-	"identity": "linkprada.CustomCleanArchitecture",
-	"name": "Custom Clean Architecture Solution",
-	"shortName": "custom-clean-arch",
-	"sourceName": "CleanArchTemplate",
-	"preferNameDirectory": true,
-	"sources": [
-		{
-			"modifiers": [
-				{ "exclude": [ ".vs/**", ".template_config/**", "README.md" ] }
-			]
-		}
-	]
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Said Haouaouchi @linkprada",
+    "classifications": ["Web", "ASP.NET", "Custom Clean Architecture"],
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "identity": "linkprada.CustomCleanArchitecture",
+    "name": "Custom Clean Architecture Solution",
+    "shortName": "custom-clean-arch",
+    "sourceName": "CleanArchTemplate",
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [".git/**", ".vs/**", ".template_config/**", "README.md"]
+                }
+            ]
+        }
+    ]
 }

@@ -2,10 +2,9 @@
 // Copyright (c) linkprada. All rights reserved.
 // </copyright>
 
-using System.Net.Mail;
-using System.Threading.Tasks;
 using CleanArchTemplate.Core.Interfaces;
 using Microsoft.Extensions.Logging;
+using System.Net.Mail;
 
 namespace CleanArchTemplate.Infrastructure
 {
