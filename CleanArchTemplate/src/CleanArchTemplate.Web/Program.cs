@@ -7,7 +7,9 @@ using Autofac.Core;
 using CleanArchTemplate.Core;
 using CleanArchTemplate.Infrastructure;
 using CleanArchTemplate.Infrastructure.Data;
+using CleanArchTemplate.Infrastructure.Identity;
 using CleanArchTemplate.Web;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -24,6 +26,11 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 string connectionString = builder.Configuration.GetConnectionString("SqliteConnection");  //Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext(connectionString);
+builder.Services.AddIdentityDbContext(connectionString);
+
+builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<AppIdentityDbContext>()
+                    .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews().AddNewtonsoftJson();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
